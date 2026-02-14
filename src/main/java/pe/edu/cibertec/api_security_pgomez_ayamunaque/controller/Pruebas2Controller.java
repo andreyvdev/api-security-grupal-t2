@@ -37,8 +37,8 @@ public class Pruebas2Controller {
 	@PostMapping("/prueba2")
 	public ResponseEntity<MensajePruebaResponse> prueba2(@RequestBody MensajePruebaResponse mensaje){
 		MensajePruebaResponse msg = new MensajePruebaResponse();
-		msg.setMensaje("Usted tiene rol ADMIN: " + mensaje);
-		return ResponseEntity.ok(mensaje);
+		msg.setMensaje("Usted tiene rol ADMIN: " + mensaje.getMensaje());
+		return ResponseEntity.ok(msg);
 	}
 	
 	@PutMapping("/prueba3/{id}")
